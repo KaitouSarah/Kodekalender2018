@@ -1,3 +1,5 @@
+package Luke11;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -6,7 +8,7 @@ public class Luke11 {
     public static void main (String args[]) {
         int y = 0;
         int x = 0;
-        File file = new File("./inputLuke11.txt");
+        File file = new File("./src/Luke11/inputLuke11.txt");
         Scanner sc;
 
         try {
@@ -28,7 +30,7 @@ public class Luke11 {
                 }
              }
 
-            System.out.println("X = " + x + " and Y = " + y);
+            System.out.println("Gavene er på koordinatene [" + x + "," + y + "]");
             sc.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
