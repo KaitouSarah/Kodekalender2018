@@ -30,7 +30,7 @@ public class Luke11 {
                 }
              }
 
-            System.out.println("Gavene er på koordinatene [" + x + "," + y + "]");
+            System.out.println("Gavene er på koordinatene [" + x + "," + y);
             sc.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
