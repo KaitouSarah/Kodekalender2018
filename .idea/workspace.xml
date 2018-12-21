@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="32ffc83b-1a65-4874-acae-8faa6e96d098" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Luke15/Oppgave" afterPath="$PROJECT_DIR$/src/Luke15/Oppgave" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Luke15/inputLuke15.txt" afterPath="$PROJECT_DIR$/src/Luke15/inputLuke15.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -461,7 +459,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29941000" />
+    <option name="totallyTimeSpent" value="30085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
