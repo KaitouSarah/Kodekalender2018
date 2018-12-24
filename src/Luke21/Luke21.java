@@ -2,14 +2,19 @@ package Luke21;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
+/*
+Løsningen er akkurat nå litt ineffektiv (tar ca 8 min),
+og metoden for å sjekke om et tall er abundant skulle
+vært optimalisert.. men det er snart jul så hvem har tid
+til slikt? :D
+ */
 public class Luke21 {
 
     public static void main (String args[]) {
         ArrayList<Integer> listOfPrimes = makeListOfPrimes(1000000);
         System.out.println(listOfPrimes.size());
         ArrayList<Integer> allSandwichedRichies = findAllSandwichedRichies(listOfPrimes);
-        int sumOfSandwichedRichies = sumOfNumbers(allSandwichedRichies);
+        Long sumOfSandwichedRichies = sumOfNumbers(allSandwichedRichies);
         System.out.println("The sum of all sandwiched richies is " + sumOfSandwichedRichies);
     }
 
@@ -20,7 +25,7 @@ public class Luke21 {
             int lastPrime = listOfPrimes.get(i-1);
             int thisPrime = listOfPrimes.get(i);
             if (thisPrime - lastPrime == 2) {
-                if(isAbundantNumber(listOfPrimes.get(i) - 1)) {
+                if(isAbundantNumber(thisPrime - 1)) {
                     sandwichedRichies.add(thisPrime - 1);
                 }
             }
@@ -31,27 +36,20 @@ public class Luke21 {
 
     private static boolean isAbundantNumber(int number) {
         ArrayList<Integer> listOfDivisors = new ArrayList<>();
-        for (int i = 1; i <= number/2; i++) {
+        listOfDivisors.add(1);
+        for (int i = 2; i <= number/2; i++) {
             if (number % i == 0) {
                 listOfDivisors.add(i);
             }
         }
-        if (productOfNumbers(listOfDivisors) > number) {
+        if (sumOfNumbers(listOfDivisors) > number) {
             return true;
         }
         return false;
     }
 
-    private static int productOfNumbers(ArrayList<Integer> listOfNumbers) {
-        int sum = 1;
-        for (int i = 0; i < listOfNumbers.size(); i++) {
-            sum *= listOfNumbers.get(i);
-        }
-        return sum;
-    }
-
-    private static int sumOfNumbers(ArrayList<Integer> listOfNumbers) {
-        int sum = 0;
+    private static long sumOfNumbers(ArrayList<Integer> listOfNumbers) {
+        long sum = 0L;
         for (int i = 0; i < listOfNumbers.size(); i++) {
             sum += listOfNumbers.get(i);
         }
@@ -70,6 +68,7 @@ public class Luke21 {
             }
             if (isPrime) {
                 listOfPrimes.add(n);
+                //System.out.println(n);
             }
         }
 
